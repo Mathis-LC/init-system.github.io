@@ -1,4 +1,4 @@
-# Site systèmes d'initialisation sur Linux
+# Site systèmes d'initialisation
 
 Lien vers le site hébergé sur github pages
 
