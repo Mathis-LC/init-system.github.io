@@ -1,0 +1,119 @@
+<!DOCTYPE HTML> 
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Site systèmes d'initialisation</title>
+		
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/styles/style.css">
+
+        <script src="./static/js/navbar.js" defer></script>
+        <script src="./static/js/navbar-indicator.js" defer></script>       
+	</head>
+    <body>
+        <header>
+            <nav class="navbar is-fixed-top is-dark" aria-label="main navigation">
+
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./index.html">Accueil</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./systemd.html">SystemD</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./sysVinit.html">SysVinit</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./initd.html">/etc/init.d/</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./openrc.html">OpenRC</a>                    
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./runit.html">runit</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./dinit.html">Dinit</a>
+                    </div>
+                </div>
+            </nav> 
+        </header>
+        <main class="section site-content mt-6">
+
+            <div class="container mb-6">
+                <table>
+                    <caption>
+                        runit
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered">Commande</th>
+                            <th class="has-text-centered">Utilité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>sv status [nom_service]</code></td>
+                            <td>Affiche des informations sur l'état du service spécifié</td>
+                        </tr>
+                        <tr>
+                            <td><code>sv start [nom_service]</code></td>
+                            <td>Démarre le service spécifié et attend qu'il soit opérationnel</td>
+                        </tr>
+                        <tr>
+                            <td><code>sv stop [nom_service]</code></td>
+                            <td>Arrête le service spécifié et attend son arrêt</td>
+                        </tr>
+                        <tr>
+                            <td><code>sv reload [nom_service]</code></td>
+                            <td>Recharge la configuration du service spécifié sans le redémarrer</td>
+                        </tr>
+                        <tr>
+                            <td><code>sv restart [nom_service]</code></td>
+                            <td>Redémarre le service spécifié et attend qu'il soit de nouveau opérationnel</td>
+                        </tr>
+                        <tr>
+                            <td><code>sv shutdown [nom_service]</code></td>
+                            <td>Arrête le service spécifié et demande au superviseur runsv de se terminer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container mt-6">
+                <table>
+                    <caption>
+                        Distributions Linux utilisant runit
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered">Distribution</th>
+                            <th class="has-text-centered">Utilisation de runit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Void Linux</td>
+                            <td>Système d'initialisation par défaut</td>
+                        </tr>
+                        <tr>
+                            <td>antiX Linux</td>
+                            <td>Système d'initialisation par défaut depuis la version 26, également disponible comme choix alternatif</td>
+                        </tr>
+                        <tr>
+                            <td>Artix Linux</td>
+                            <td>Disponible comme choix lors de l'installation</td>
+                        </tr>
+                        <tr>
+                            <td>Devuan</td>
+                            <td>Disponible comme système d'initialisation alternatif</td>
+                        </tr>
+                        <tr>
+                            <td>Gentoo Linux</td>
+                            <td>Disponible comme système d'initialisation alternatif</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

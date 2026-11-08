@@ -1,0 +1,80 @@
+<!DOCTYPE HTML> 
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Site systèmes d'initialisation</title>
+		
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/styles/style.css">
+
+        <script src="./static/js/navbar.js" defer></script>
+        <script src="./static/js/navbar-indicator.js" defer></script>       
+	</head>
+    <body>
+        <header>
+            <nav class="navbar is-fixed-top is-dark" aria-label="main navigation">
+
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./index.html">Accueil</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./systemd.html">SystemD</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./sysVinit.html">SysVinit</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./initd.html">/etc/init.d/</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./openrc.html">OpenRC</a>                    
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./runit.html">runit</a>
+                        <a class="navbar-item has-text-weight-bold has-text-white" href="./dinit.html">Dinit</a>
+                    </div>
+                </div>
+            </nav> 
+        </header>
+
+        <main class="section site-content mt-6">      
+
+            <div class="container mb-6">
+                <table>
+                    <caption>
+                        Commandes alternatives sous SysVinit
+                    </caption>                    
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered">Commande</th>
+                            <th class="has-text-centered">Utilité</th>
+                        </tr>
+                    </thead>
+                    <tbody>                
+                    <tr>
+                        <td><code>/etc/init.d/[nom_service] start</code></td>
+                        <td>Démarre le service spécifié</td>
+                    </tr>
+                    <tr>
+                        <td><code>/etc/init.d/[nom_service] stop</code></td>
+                        <td>Arrête le service spécifié</td>
+                    </tr>
+                    <tr>
+                        <td><code>/etc/init.d/[nom_service] restart</code></td>
+                        <td>Redémarre le service spécifié</td>
+                    </tr>
+                    <tr>
+                        <td><code>/etc/init.d/[nom_service] reload</code></td>
+                        <td>Demande au service de recharger sa configuration sans l'arrêter ni le redémarrer</td>
+                    </tr>
+                    <tr>
+                        <td><code>/etc/init.d/[nom_service] status</code></td>
+                        <td>Affiche des informations sur l'état du service spécifié</td>
+                    </tr>
+                    </tbody>            
+                </table>
+            </div>
+        </main>
+    </body>
+</html>                    
